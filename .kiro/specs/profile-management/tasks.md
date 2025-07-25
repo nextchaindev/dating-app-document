@@ -83,15 +83,7 @@
   - Write integration tests for all API endpoints
   - _Requirements: 1.1, 1.2, 2.1, 2.5, 3.1, 3.5, 4.1, 4.3, 5.1_
 
-- [ ] 11. Add real-time updates with WebSocket integration
-
-  - Implement WebSocket event system for profile updates
-  - Add media upload progress tracking
-  - Create real-time notifications for moderation status
-  - Write integration tests for WebSocket events
-  - _Requirements: 1.5, 2.3, 3.3_
-
-- [ ] 12. Implement error handling and validation middleware
+- [ ] 11. Implement error handling and validation middleware
 
   - Create comprehensive error response formatting
   - Add client-side validation helpers
@@ -100,7 +92,7 @@
   - Write unit tests for error handling scenarios
   - _Requirements: 1.3, 2.2, 3.2, 3.4, 4.5_
 
-- [ ] 13. Create matching algorithm integration service
+- [ ] 12. Create matching algorithm integration service
 
   - Implement service to sync profile changes with matching system
   - Add preference update notifications to matching algorithm
@@ -108,7 +100,7 @@
   - Write unit tests for matching integration
   - _Requirements: 4.4_
 
-- [ ] 14. Build comprehensive test suite
+- [ ] 13. Build comprehensive test suite
 
   - Create end-to-end tests for complete profile creation flow
   - Add performance tests for media upload and processing
@@ -116,7 +108,7 @@
   - Create load tests for concurrent profile operations
   - _Requirements: All requirements for system reliability_
 
-- [ ] 15. Add caching and performance optimizations
+- [ ] 14. Add caching and performance optimizations
   - Implement Redis caching for frequently accessed profile data
   - Add CDN integration for media content delivery
   - Optimize database queries with proper indexing

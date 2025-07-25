@@ -15,8 +15,7 @@ Initial market: Vietnam; potential expansion to Southeast Asia
 
 II. Functional Requirements
 2.1 User Registration & Login
-Users can register via phone number, email, Google or Facebook
-OTP or email verification required for security
+Users can register via email for security
 2.2 User Profile
 Basic info: name, age, gender, occupation, location
 Interests: selectable from predefined categories or custom input

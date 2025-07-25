@@ -69,6 +69,7 @@ VI. Deployment & CI/CD
 CI/CD: GitHub Actions
 Hosting:
 Backend: Render
+Frontend: Vercel
 DB: Supabase
 Static Assets: R2
 Monitoring: Sentry (for error tracking)

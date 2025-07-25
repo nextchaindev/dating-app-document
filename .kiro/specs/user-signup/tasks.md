@@ -17,7 +17,7 @@
 
 - [ ] 2.2 Implement registration data validation
 
-  - Create validation functions for email, phone, and password formats
+  - Create validation functions for email, phone, and password formats with react-hook-form
   - Implement password strength validation (8+ chars, special characters, numbers)
   - Add phone number format validation with country code support
   - Write unit tests for all validation functions
@@ -42,7 +42,7 @@
 - [ ] 4. Implement registration service
 - [ ] 4.1 Create email registration functionality
 
-  - Implement registerWithEmail method with validation
+  - Implement registerWithEmail method with validation by react-hook-form
   - Add password hashing using bcrypt with salt rounds
   - Create user account creation logic for email registration
   - Write unit tests for email registration flow
@@ -50,19 +50,11 @@
 
 - [ ] 4.2 Create phone registration functionality
 
-  - Implement registerWithPhone method with phone validation
+  - Implement registerWithPhone method with phone validation by react-hook-form
   - Add OTP generation and storage logic
   - Create user account creation logic for phone registration
   - Write unit tests for phone registration flow
   - _Requirements: 1.1, 1.3, 1.5, 1.6_
-
-- [ ] 4.3 Create social media registration functionality
-
-  - Implement registerWithSocial method for Google and Facebook
-  - Add OAuth token validation and user data extraction
-  - Create user account creation logic for social registration
-  - Write unit tests for social registration flow
-  - _Requirements: 1.1, 1.4, 1.5, 1.6_
 
 - [ ] 5. Implement verification service
 - [ ] 5.1 Create email verification system

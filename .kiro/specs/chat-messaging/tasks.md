@@ -41,28 +41,28 @@
   - Write tests for message retrieval with various scenarios
   - _Requirements: 2.4_
 
-- [ ] 4. Create WebSocket server for real-time messaging
-- [ ] 4.1 Set up WebSocket connection management
+- [ ] 4. Create Socket.IO server for real-time messaging
+- [ ] 4.1 Set up Socket.IO connection management
 
-  - Implement WebSocket server with connection handling
-  - Add user authentication for WebSocket connections
-  - Create connection pooling and management system
+  - Implement Socket.IO server with connection handling
+  - Add user authentication for Socket.IO connections
+  - Create room-based connection management for conversations
   - Write tests for connection establishment and cleanup
   - _Requirements: 1.2, 1.3_
 
 - [ ] 4.2 Implement real-time message delivery
 
-  - Add message broadcasting to connected recipients
-  - Implement typing indicators with start/stop events
-  - Create message status update broadcasting
+  - Add message broadcasting to conversation rooms using Socket.IO
+  - Implement typing indicators with Socket.IO events (typing_start/typing_stop)
+  - Create message status update broadcasting via Socket.IO rooms
   - Write tests for real-time message delivery scenarios
   - _Requirements: 1.2, 1.3, 3.5_
 
 - [ ] 4.3 Add message status tracking
 
   - Implement sent/delivered/read status updates
-  - Create status indicator broadcasting to senders
-  - Add markAsRead functionality with WebSocket updates
+  - Create status indicator broadcasting to senders via Socket.IO
+  - Add markAsRead functionality with Socket.IO event emission
   - Write tests for all message status transitions
   - _Requirements: 3.1, 3.2, 3.3_
 
@@ -138,7 +138,7 @@
 
   - Build real-time message interface with input field
   - Implement message bubble display with timestamps
-  - Add WebSocket connection management in frontend
+  - Add Socket.IO client connection management in frontend
   - Write component tests for chat interface
   - _Requirements: 1.2, 1.3, 2.4_
 
@@ -152,8 +152,8 @@
 
 - [ ] 8.3 Add typing indicators and real-time features
 
-  - Implement typing indicator display
-  - Add real-time message updates via WebSocket
+  - Implement typing indicator display using Socket.IO events
+  - Add real-time message updates via Socket.IO
   - Create smooth message animation and scrolling
   - Write tests for real-time features
   - _Requirements: 3.5_
