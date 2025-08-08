@@ -31,30 +31,17 @@ This feature allows users to create, view, and update their dating profiles incl
 5. WHEN a user deletes photos THEN the system SHALL remove from storage and update profile immediately
 6. WHEN photo contains inappropriate content THEN the system SHALL flag for moderation review
 
-### Requirement 3
-
-**User Story:** As a user, I want to upload short videos to my profile, so that I can express my personality more dynamically and stand out to potential matches.
-
-#### Acceptance Criteria
-
-1. WHEN a user accesses video management THEN the system SHALL display current videos and upload interface
-2. WHEN a user uploads video THEN the system SHALL support MP4, MOV formats up to 50MB with maximum 30-second duration
-3. WHEN video upload is successful THEN the system SHALL compress video, generate thumbnail, and save to profile
-4. WHEN video processing fails THEN the system SHALL display error message and allow retry
-5. WHEN a user deletes video THEN the system SHALL remove from storage and update profile immediately
-6. WHEN video contains inappropriate content THEN the system SHALL flag for moderation review
-
 ### Requirement 4
 
-**User Story:** As a user, I want to update my interests and preferences, so that the matching algorithm can find more compatible partners based on my current preferences.
+**User Story:** As a user, I want to update my gender and gender preferences, so that the matching algorithm can find compatible partners based on my current preferences.
 
 #### Acceptance Criteria
 
-1. WHEN a user accesses interest settings THEN the system SHALL display current interests with add/remove options
-2. WHEN a user adds interests THEN the system SHALL require minimum 3 interests and maximum 20 interests
+1. WHEN a user accesses preference settings THEN the system SHALL display current gender and gender preference options
+2. WHEN a user updates gender preference THEN the system SHALL save the preference and refresh potential matches
 3. WHEN a user updates matching preferences THEN the system SHALL save age range, distance, and gender preferences
-4. WHEN preferences are updated THEN the system SHALL refresh matching algorithm with new criteria
-5. WHEN user removes too many interests (below 3) THEN the system SHALL display warning and prevent saving
+4. WHEN preferences are updated THEN the system SHALL refresh matching algorithm with new criteria immediately
+5. WHEN user changes gender preference THEN the system SHALL clear current discovery queue and reload with new criteria
 
 ### Requirement 5
 

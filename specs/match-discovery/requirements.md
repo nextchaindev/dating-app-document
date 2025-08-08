@@ -8,15 +8,15 @@ This feature provides the core matching and discovery functionality that helps u
 
 ### Requirement 1
 
-**User Story:** As a user, I want to see potential matches based on my interests and preferences, so that I can discover compatible people who share similar hobbies and values.
+**User Story:** As a user, I want to see potential matches based on my gender preferences, so that I can discover compatible people who match my dating criteria.
 
 #### Acceptance Criteria
 
-1. WHEN a user opens the discovery page THEN the system SHALL display potential matches based on interest similarity and preferences
-2. WHEN calculating matches THEN the system SHALL consider shared interests, age range, location distance, and gender preferences
-3. WHEN no matches are available THEN the system SHALL display message suggesting profile optimization or preference adjustment
-4. WHEN user has exhausted nearby matches THEN the system SHALL suggest expanding search radius or updating preferences
-5. WHEN match suggestions are generated THEN the system SHALL prioritize users with highest compatibility scores
+1. WHEN a user opens the discovery page THEN the system SHALL display potential matches based on gender preferences and age range
+2. WHEN calculating matches THEN the system SHALL filter users by gender preference compatibility
+3. WHEN no matches are available THEN the system SHALL display message suggesting updating age preferences
+4. WHEN user has exhausted matches THEN the system SHALL suggest updating age preferences or expanding criteria
+5. WHEN match suggestions are generated THEN the system SHALL prioritize users by recent activity and profile completeness
 
 ### Requirement 2
 
@@ -24,11 +24,11 @@ This feature provides the core matching and discovery functionality that helps u
 
 #### Acceptance Criteria
 
-1. WHEN a user views a match card THEN the system SHALL display profile photo, name, age, distance, and shared interests
+1. WHEN a user views a match card THEN the system SHALL display profile photo, name, age, and bio preview
 2. WHEN a user swipes right or taps like THEN the system SHALL record positive interest and show next match
 3. WHEN a user swipes left or taps pass THEN the system SHALL record negative interest and show next match
 4. WHEN both users like each other THEN the system SHALL create a mutual match and notify both users
-5. WHEN a user undoes last action THEN the system SHALL reverse the decision and restore previous state (premium feature)
+5. WHEN a user undoes last action THEN the system SHALL reverse the decision and restore previous state
 
 ### Requirement 3
 
@@ -36,23 +36,23 @@ This feature provides the core matching and discovery functionality that helps u
 
 #### Acceptance Criteria
 
-1. WHEN a user taps on match card THEN the system SHALL display full profile with all photos, videos, bio, and interests
-2. WHEN viewing detailed profile THEN the system SHALL show compatibility score and shared interests highlighted
+1. WHEN a user taps on match card THEN the system SHALL display full profile with all photos, bio, and age
+2. WHEN viewing detailed profile THEN the system SHALL show all uploaded photos in a scrollable gallery
 3. WHEN in detailed view THEN the system SHALL provide like/pass buttons and swipe gestures
 4. WHEN user scrolls through profile photos THEN the system SHALL display photo indicators and smooth transitions
 5. WHEN user closes detailed view THEN the system SHALL return to main discovery feed at same position
 
 ### Requirement 4
 
-**User Story:** As a user, I want to use advanced filters to refine my match suggestions, so that I can find people who meet my specific criteria and preferences.
+**User Story:** As a user, I want to use age filters to refine my match suggestions, so that I can find people who meet my age preferences.
 
 #### Acceptance Criteria
 
-1. WHEN a user accesses filter options THEN the system SHALL display age range, distance, education, occupation, and interest filters
-2. WHEN filters are applied THEN the system SHALL update match suggestions to only show users meeting criteria
-3. WHEN no matches meet filter criteria THEN the system SHALL suggest relaxing specific filters
-4. WHEN user resets filters THEN the system SHALL return to default matching algorithm
-5. WHEN premium filters are used THEN the system SHALL verify user subscription status before applying
+1. WHEN a user accesses filter options THEN the system SHALL display age range filter
+2. WHEN age filter is applied THEN the system SHALL update match suggestions to only show users meeting age criteria
+3. WHEN no matches meet age criteria THEN the system SHALL suggest expanding age range
+4. WHEN user resets filters THEN the system SHALL return to default matching algorithm based on gender preferences
+5. WHEN age filter is updated THEN the system SHALL immediately refresh the discovery queue with new criteria
 
 ### Requirement 5
 

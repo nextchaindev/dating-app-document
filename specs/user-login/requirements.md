@@ -8,11 +8,11 @@ This feature provides secure authentication for existing users to access their a
 
 ### Requirement 1
 
-**User Story:** As a registered user, I want to log into my account using my credentials (email/phone and password), so that I can access my profile and start matching with other users.
+**User Story:** As a registered user, I want to log into my account using my credentials (email and password), so that I can access my profile and start matching with other users.
 
 #### Acceptance Criteria
 
-1. WHEN a user visits the login page THEN the system SHALL display login form with email/phone and password fields
+1. WHEN a user visits the login page THEN the system SHALL display login form with email and password fields
 2. WHEN a user enters valid credentials THEN the system SHALL authenticate and redirect to main dashboard
 3. WHEN a user enters invalid credentials THEN the system SHALL display error message without revealing which field is incorrect
 4. WHEN a user submits empty fields THEN the system SHALL display validation errors for required fields
@@ -24,23 +24,23 @@ This feature provides secure authentication for existing users to access their a
 
 #### Acceptance Criteria
 
-1. WHEN a user fails login 5 times THEN the system SHALL lock the account for 15 minutes
-2. WHEN account is locked THEN the system SHALL display lockout message with remaining time
-3. WHEN lockout period expires THEN the system SHALL automatically unlock the account
-4. WHEN user attempts login during lockout THEN the system SHALL extend lockout by 5 minutes
-5. WHEN successful login occurs THEN the system SHALL reset failed attempt counter
+1. WHEN a user fails login THEN the system SHALL log the failed attempt for security monitoring
+2. WHEN a user enters invalid credentials THEN the system SHALL display generic error message without revealing specific field errors
+3. WHEN multiple failed attempts occur THEN the system SHALL log security events for monitoring
+4. WHEN successful login occurs THEN the system SHALL log successful authentication event
+5. WHEN user accesses protected routes THEN the system SHALL validate JWT token and user permissions
 
 ### Requirement 3
 
-**User Story:** As a user, I want to log in using my social media accounts (Google/Facebook), so that I can access the platform quickly without remembering passwords.
+**User Story:** As a user, I want to have my login session remember my preferences, so that the system can show me relevant matches based on my gender preferences when I return.
 
 #### Acceptance Criteria
 
-1. WHEN a user clicks social login button THEN the system SHALL redirect to OAuth provider
-2. WHEN OAuth authentication succeeds THEN the system SHALL create or link account and log user in
-3. WHEN OAuth authentication fails THEN the system SHALL display error and return to login page
-4. WHEN social account is not linked THEN the system SHALL prompt to link with existing account or create new one
-5. WHEN social login is successful THEN the system SHALL generate JWT token same as regular login
+1. WHEN a user logs in successfully THEN the system SHALL load their gender and gender preference settings
+2. WHEN user session is established THEN the system SHALL prepare matching algorithm based on gender preferences
+3. WHEN user accesses discovery features THEN the system SHALL filter potential matches by gender preferences
+4. WHEN user updates gender preferences THEN the system SHALL update session data immediately
+5. WHEN user logs out THEN the system SHALL clear all preference data from session
 
 ### Requirement 4
 
